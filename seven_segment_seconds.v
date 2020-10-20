@@ -7,8 +7,8 @@ module seven_segment_seconds (
 );
 
     // external clock is 16MHz, so need 24 bit counter
-    reg [23:0] counter = 0;
-    reg [3:0] seconds = 0;
+    reg [23:0] second_counter = 0;
+    reg [3:0] digit = 0;
 
     `ifdef COCOTB_SIM
         initial begin
@@ -25,29 +25,29 @@ module seven_segment_seconds (
     always @(posedge clk) begin
         // if reset, set counter to 0
         if (reset) begin
-            counter <= 0;
-            seconds <= 0;
+            second_counter <= 0;
+            digit <= 0;
         end else begin
             // if up to 16e6
-            if (counter == MAX_COUNT) begin
+            if (second_counter == MAX_COUNT) begin
                 // reset
-                counter <= 0;
+                second_counter <= 0;
 
-                // increment seconds
-                seconds <= seconds + 1;
+                // increment digit
+                digit <= digit + 1;
 
                 // only count from 0 to 9
-                if (seconds == 9)
-                    seconds <= 0;
+                if (digit == 9)
+                    digit <= 0;
 
             end else
                 // increment counter
-                counter <= counter + 1;
+                second_counter <= second_counter + 1;
         end
     end
 
     // instantiate segment display
-    seg7 seg7(.counter(seconds), .segments(led_out));
+    seg7 seg7(.counter(digit), .segments(led_out));
 
 endmodule
 
