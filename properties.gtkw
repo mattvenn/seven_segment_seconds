@@ -1,26 +1,25 @@
 [*]
 [*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
-[*] Tue Oct 20 12:46:32 2020
+[*] Tue Oct 20 12:47:55 2020
 [*]
-[dumpfile] "/home/matt/work/asic-workshop/seven_segment_seconds/seven_segment_seconds.vcd"
-[dumpfile_mtime] "Tue Oct 20 12:46:19 2020"
-[dumpfile_size] 208325
-[savefile] "/home/matt/work/asic-workshop/seven_segment_seconds/seven_segment_seconds.gtkw"
+[dumpfile] "/home/matt/work/asic-workshop/seven_segment_seconds/properties/engine_0/trace_induct.vcd"
+[dumpfile_mtime] "Tue Oct 20 12:47:11 2020"
+[dumpfile_size] 5770
+[savefile] "/home/matt/work/asic-workshop/seven_segment_seconds/properties.gtkw"
 [timestart] 0
-[size] 2019 1018
+[size] 2052 1002
 [pos] -1 -1
-*-32.000000 15670000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-5.736966 184 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [sst_width] 240
-[signals_width] 410
+[signals_width] 524
 [sst_expanded] 1
-[sst_vpaned_height] 297
+[sst_vpaned_height] 292
 @28
 seven_segment_seconds.clk
 seven_segment_seconds.reset
 @22
-seven_segment_seconds.second_counter[23:0]
-@25
 seven_segment_seconds.digit[3:0]
+seven_segment_seconds.second_counter[23:0]
 @200
 -
 @800022

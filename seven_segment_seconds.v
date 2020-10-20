@@ -34,7 +34,7 @@ module seven_segment_seconds (
                 second_counter <= 0;
 
                 // increment digit
-                digit <= digit + 1;
+                digit <= digit + 1'b1;
 
                 // only count from 0 to 9
                 if (digit == 9)
@@ -42,7 +42,7 @@ module seven_segment_seconds (
 
             end else
                 // increment counter
-                second_counter <= second_counter + 1;
+                second_counter <= second_counter + 1'b1;
         end
     end
 
@@ -64,7 +64,6 @@ endmodule
 */
 
 module seg7 (
-    input wire clk,
     input wire [3:0] counter,
     output reg [6:0] segments
 );

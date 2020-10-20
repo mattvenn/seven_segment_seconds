@@ -7,3 +7,6 @@ include $(shell cocotb-config --makefiles)/Makefile.sim
 
 gtkwave:
 	gtkwave seven_segment_seconds.vcd seven_segment_seconds.gtkw
+
+formal:
+	sby -f properties.sby

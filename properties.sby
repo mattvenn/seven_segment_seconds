@@ -1,0 +1,16 @@
+[options]
+mode prove
+depth 20
+
+[engines]
+smtbmc yices
+
+[script]
+read -verific
+read -formal seven_segment_seconds.v
+read -formal properties.sv
+prep -top seven_segment_seconds
+
+[files]
+seven_segment_seconds.v
+properties.sv
