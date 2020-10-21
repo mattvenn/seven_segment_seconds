@@ -15,7 +15,7 @@ module properties (
 	default clocking @(posedge clk); endclocking
 //	default disable iff (reset);
 
-	no_change_reset:        assert property (reset |=> led_out == 7'b1111111);
+	no_change_reset:        assert property (reset |=> led_out == 7'b0111111);
     digits_zero_on_reset:   assert property (reset |=> seven_segment_seconds.digit == 0);
     digits_in_range:        assert property (seven_segment_seconds.digit <= 9);
     seconds_overflow:       assert property (seven_segment_seconds.second_counter == seven_segment_seconds.MAX_COUNT |=> seven_segment_seconds.second_counter == 0);

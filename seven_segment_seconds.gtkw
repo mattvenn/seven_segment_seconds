@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
-[*] Tue Oct 20 12:46:32 2020
+[*] Wed Oct 21 14:17:27 2020
 [*]
 [dumpfile] "/home/matt/work/asic-workshop/seven_segment_seconds/seven_segment_seconds.vcd"
-[dumpfile_mtime] "Tue Oct 20 12:46:19 2020"
-[dumpfile_size] 208325
+[dumpfile_mtime] "Wed Oct 21 14:17:03 2020"
+[dumpfile_size] 208585
 [savefile] "/home/matt/work/asic-workshop/seven_segment_seconds/seven_segment_seconds.gtkw"
 [timestart] 0
 [size] 2019 1018
 [pos] -1 -1
-*-32.000000 15670000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-32.000000 10650000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [sst_width] 240
 [signals_width] 410
 [sst_expanded] 1
