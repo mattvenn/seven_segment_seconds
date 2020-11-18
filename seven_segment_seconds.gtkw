@@ -1,17 +1,17 @@
 [*]
 [*] GTKWave Analyzer v3.3.108 (w)1999-2020 BSI
-[*] Wed Oct 21 14:17:27 2020
+[*] Wed Nov 18 10:03:14 2020
 [*]
-[dumpfile] "/home/matt/work/asic-workshop/seven_segment_seconds/seven_segment_seconds.vcd"
-[dumpfile_mtime] "Wed Oct 21 14:17:03 2020"
-[dumpfile_size] 208585
-[savefile] "/home/matt/work/asic-workshop/seven_segment_seconds/seven_segment_seconds.gtkw"
+[dumpfile] "/home/matt/work/asic-workshop/multi-project-harness/seven-segment-seconds/seven_segment_seconds.vcd"
+[dumpfile_mtime] "Wed Nov 18 10:02:01 2020"
+[dumpfile_size] 4796
+[savefile] "/home/matt/work/asic-workshop/multi-project-harness/seven-segment-seconds/seven_segment_seconds.gtkw"
 [timestart] 0
 [size] 2019 1018
 [pos] -1 -1
-*-32.000000 10650000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
-[sst_width] 240
-[signals_width] 410
+*-30.000000 1120000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 272
+[signals_width] 647
 [sst_expanded] 1
 [sst_vpaned_height] 297
 @28
@@ -19,8 +19,18 @@ seven_segment_seconds.clk
 seven_segment_seconds.reset
 @22
 seven_segment_seconds.second_counter[23:0]
-@25
+@24
 seven_segment_seconds.digit[3:0]
+@800200
+-interface
+@22
+seven_segment_seconds.compare_in[23:0]
+@28
+seven_segment_seconds.update_compare
+@25
+seven_segment_seconds.compare[23:0]
+@1000200
+-interface
 @200
 -
 @800022
