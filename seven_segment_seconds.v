@@ -7,8 +7,8 @@ module seven_segment_seconds (
 );
 
     // external clock is 16MHz, so need 24 bit counter
-    reg [23:0] second_counter = 0;
-    reg [3:0] digit = 0;
+    reg [23:0] second_counter;
+    reg [3:0] digit;
 
     `ifdef COCOTB_SIM
         initial begin
