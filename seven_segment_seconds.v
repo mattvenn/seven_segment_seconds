@@ -3,12 +3,15 @@
 module seven_segment_seconds (
 	input wire clk,
     input wire reset,
+    input wire [23:0] compare_in,
+    input wire update_compare,
 	output wire [6:0] led_out
 );
 
     // external clock is 16MHz, so need 24 bit counter
     reg [23:0] second_counter;
     reg [3:0] digit;
+    reg [23:0] compare;
 
     `ifdef COCOTB_SIM
         initial begin
@@ -27,9 +30,14 @@ module seven_segment_seconds (
         if (reset) begin
             second_counter <= 0;
             digit <= 0;
+            compare <= MAX_COUNT;
+        end else if (update_compare) begin
+            compare <= compare_in;
+            second_counter <= 0;
+            digit <= 0;
         end else begin
             // if up to 16e6
-            if (second_counter == MAX_COUNT) begin
+            if (second_counter == compare - 1) begin
                 // reset
                 second_counter <= 0;
 
@@ -88,3 +96,4 @@ module seg7 (
     end
 
 endmodule
+`default_nettype wire

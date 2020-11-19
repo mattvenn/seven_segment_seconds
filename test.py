@@ -1,6 +1,8 @@
 import cocotb
 from cocotb.clock import Clock
-from cocotb.triggers import RisingEdge, ClockCycles
+from cocotb.triggers import RisingEdge, FallingEdge, ClockCycles
+
+PERIOD = 10
 
 @cocotb.test()
 async def test(dut):
@@ -9,5 +11,20 @@ async def test(dut):
     dut.reset <= 1;
     await ClockCycles(dut.clk, 5)
     dut.reset <= 0;
-    
-    await ClockCycles(dut.clk, 5000)
+    await ClockCycles(dut.clk, 1)
+    assert dut.digit == 0
+   
+    # update compare
+    await RisingEdge(dut.clk)
+    dut.compare_in <= PERIOD 
+    dut.update_compare <= 1;
+    await RisingEdge(dut.clk)
+    dut.compare_in <= 0
+    dut.update_compare <= 0;
+
+    await RisingEdge(dut.clk)
+
+    for i in range(10):
+        assert dut.digit == i
+        await ClockCycles(dut.clk, PERIOD)
+
