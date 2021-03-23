@@ -2,6 +2,7 @@
 MODULE = test
 TOPLEVEL = seven_segment_seconds
 VERILOG_SOURCES = seven_segment_seconds.v
+export COCOTB_REDUCED_LOG_FMT=1
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
