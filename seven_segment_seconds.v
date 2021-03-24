@@ -1,9 +1,9 @@
 `default_nettype none
 
 module seven_segment_seconds (
-	input wire clk,
+    input wire clk,
     input wire reset,
-	output wire [6:0] led_out
+    output wire [6:0] led_out
 );
 
     // external clock is 16MHz, so need 24 bit counter
@@ -68,7 +68,7 @@ module seg7 (
     output reg [6:0] segments
 );
 
-	always @(*) begin
+    always @(*) begin
         case(counter)
             //                7654321
             0:  segments = 7'b0111111;
