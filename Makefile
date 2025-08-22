@@ -16,4 +16,4 @@ show_counter:
 	yosys -p "read_verilog seven_segment_seconds.v; proc; opt; show -colors 2 -width -signed seven_segment_seconds"
 
 show_segment: 
-	yosys -p "read_verilog seven_segment_seconds.v; proc; opt; show -colors 2 -width -signed seg7"
+	yosys -p "read_verilog seven_segment_seconds.v; proc -norom; opt; show -colors 2 -width -signed seg7"
