@@ -6,8 +6,8 @@ from cocotb.triggers import RisingEdge, ClockCycles
 async def test(dut):
     clock = Clock(dut.clk, 10, units="us")
     cocotb.fork(clock.start())
-    dut.reset <= 1;
+    dut.reset.value = 1;
     await ClockCycles(dut.clk, 5)
-    dut.reset <= 0;
+    dut.reset.value = 0;
     
     await ClockCycles(dut.clk, 5000)
