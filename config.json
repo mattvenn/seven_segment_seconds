@@ -1,0 +1,9 @@
+{
+    "DESIGN_NAME": "seven_segment_seconds",
+    "VERILOG_FILES": "dir::seven_segment_seconds.v",
+    "CLOCK_PERIOD": 10,
+    "CLOCK_PORT": "clk",
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 150 150",
+    "FP_PIN_ORDER_CFG": "pin_order.cfg"
+}
