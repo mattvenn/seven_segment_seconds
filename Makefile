@@ -17,3 +17,14 @@ show_counter:
 
 show_segment: 
 	yosys -p "read_verilog seven_segment_seconds.v; proc -norom; opt; show -colors 2 -width -signed seg7"
+
+synth:
+	rm -rf runs
+	PDK_ROOT=/foss/pdks PDK=sky130A PDKPATH=/foss/pdks/sky130A STD_CELL_LIBRARY=sky130_fd_sc_hd \
+		 librelane --manual-pdk config.json --run-tag 7seg --to Yosys.Synthesis
+
+show_hierarchy:
+	xdot runs/synth/06-yosys-synthesis/hierarchy.dot
+
+show_cells:
+	xdot runs/synth/06-yosys-synthesis/primitive_techmap.dot
